@@ -14,4 +14,29 @@ function reverse(str) {
   return returnStr
 }
 
+// First official solution:
+// function reverse(str){
+  // const arr = str.split('')
+  // arr.reverse()
+  // arr.join()
+  // return arr
+  // OR, simpler:
+  // return str.split('').reverse().join()
+// }
+
+// Second official solution:
+// function reverse(str) {
+//   let reversed = ''
+//    for(let character of str){
+//      reversed = character + reversed
+//    }
+//   return reversed
+// }
+
+// Third official solution:
+// function reverse(str){
+  // return str.split('').reduce((reversed,char)=> character + reversed, '')
+// }
+
+
 module.exports = reverse;
