@@ -9,12 +9,13 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
+  
   let aObj = {}
   let bObj = {}
 
 
-  let aArr = stringA.toLowerCase().split('')
-  let bArr = stringB.toLowerCase().split('')
+  let aArr = stringA.replace(/[^\w]/g,"").toLowerCase().split('')
+  let bArr = stringB.replace(/[^\w]/g,"").toLowerCase().split('')
 
   function genObj(str,obj){
     for (let char of str){
