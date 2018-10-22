@@ -16,6 +16,7 @@ function palindrome(str) {
     boolArr.push(char === str[lastInt])
     lastInt--
   }
+  
   return boolArr.includes(false) ? false : true
 }
 

@@ -9,11 +9,13 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
+
     return n.toString()[0] === '-' ? parseInt(`-${n.toString().substr(1,n.length).split('').reverse().join('')}`) :     parseInt(n.toString().split('').reverse().join(''))
+    
 }
 
 
-// Official solution - keep in mind Math.sign returns 1 for positive numbers, -1 for negative numbers 
+// Official solution - keep in mind Math.sign returns 1 for positive numbers, -1 for negative numbers
 // function reverseInt(n) {
 //   const reversed = n
 //     .toString()
