@@ -24,9 +24,9 @@ function pyramid(n) {
     for(let z = 0; z<spacesNum; z++){
       if(z === middle || z === middle + i || z === middle - i){
         returnStr = returnStr + '#'
-      }else if(z<middle && z > middle - i){
+      }else if(z < middle && z > middle - i){
         returnStr = returnStr + '#'
-      }else if(z>middle && z < middle + i){
+      }else if(z > middle && z < middle + i){
         returnStr = returnStr + '#'
       }
       else{
