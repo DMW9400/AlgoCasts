@@ -17,6 +17,7 @@ function fizzBuzz(n) {
   for(let i = 1; i<=n; i++){
     arr.push(i)
   }
+
   for(let int of arr){
     if(int % 3 !== 0 && int %5 !== 0 ){
       console.log(int)
@@ -28,6 +29,7 @@ function fizzBuzz(n) {
       console.log('buzz')
     }
   }
+  
 }
 
 module.exports = fizzBuzz;
