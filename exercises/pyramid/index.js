@@ -32,7 +32,6 @@ function pyramid(n) {
       else{
         returnStr = returnStr + ' '
       }
-
     }
      console.log(returnStr)
   }

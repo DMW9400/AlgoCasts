@@ -14,13 +14,6 @@ function fib(n) {
   let results = []
   let counter = 0
 
-  if (n === 0){
-    return 0
-  }
-  if (n === 1){
-    return 1
-  }
-
   for(let i = 0; i <= n; i++){
     if (results.length < 2){
       results.push(counter)
@@ -29,11 +22,16 @@ function fib(n) {
     else{
       results.push(results[i-1]+results[i-2])
     }
-
   }
-
   return results[n]
+}
 
+// Recursive solution:
+function fibRecursive(n){
+  if (n < 2) {
+    return n;
+  }
+  return fibRecursive(n - 1) + fibRecursive(n - 2);
 }
 
 
