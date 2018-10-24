@@ -28,11 +28,16 @@ function weave(sourceOne, sourceTwo) {
 
   let weaveQueue = new Queue ()
 
-  let lastOne = sourceOne.peek()
-  let lastTwo = sourceTwo.peek()
+  let counter = 0
 
-  
-
+  while (sourceOne.peek() || sourceTwo.peek()){
+    if (counter % 2 === 0 && sourceOne.peek()){
+      weaveQueue.add(sourceOne.remove())
+    } else if (counter % 2 !== 0 && sourceTwo.peek()){
+      weaveQueue.add(sourceTwo.remove())
+    }
+    counter++
+  }
 
   return weaveQueue
 }
