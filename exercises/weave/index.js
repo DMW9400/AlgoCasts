@@ -23,6 +23,18 @@
 //    q.remove() // 'There'
 
 const Queue = require('./queue');
+
+function weave(sourceOne, sourceTwo) {
+
+  let weaveQueue = new Queue ()
+
+  while (sourceOne.peek() || sourceTwo.peek()){
+    sourceOne.peek() ? weaveQueue.add(sourceOne.remove()
+    sourceTwo.peek() ? weaveQueue.add(sourceTwo.remove()
+  }
+
+  return weaveQueue
+}
 //
 // function weave(sourceOne, sourceTwo) {
 //
@@ -45,17 +57,6 @@ const Queue = require('./queue');
 // This counter was NOT NECESSARY - because arrays in JS are FIFO (first in, first out) and the code runs from
 // top to bottom, I could have just written:
 
-function weave(sourceOne, sourceTwo) {
-
-  let weaveQueue = new Queue ()
-
-  while (sourceOne.peek() || sourceTwo.peek()){
-    sourceOne.peek() ? weaveQueue.add(sourceOne.remove()
-    sourceTwo.peek() ? weaveQueue.add(sourceTwo.remove()
-  }
-
-  return weaveQueue
-}
 
 
 module.exports = weave;
